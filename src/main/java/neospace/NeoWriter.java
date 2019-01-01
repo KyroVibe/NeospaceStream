@@ -1,6 +1,6 @@
 package neospace;
 
-import java.net.*;
+import java.io.*;
 
 public class NeoWriter {
 
@@ -15,15 +15,27 @@ public class NeoWriter {
         for (int i = 0; i < buf.length; i++) {
             buf[i] = a.charAt(i);
         }
-        osw.write(buf);
+        try {
+            osw.write(buf);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void Flush() {
-        osw.flush();
+        try {
+            osw.flush();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void Close() {
-        osw.close();
+        try {
+            osw.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
