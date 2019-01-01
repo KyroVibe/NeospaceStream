@@ -15,7 +15,7 @@ public class NeoReader {
         isr = new InputStreamReader(in);
     }
 
-    public String readLine() {
+    public String Read() {
         char[] seq = new char[256];
         try {
             isr.read(seq);
@@ -31,6 +31,14 @@ public class NeoReader {
             }
         }
         return a;
+    }
+
+    public void Close() {
+        try {
+            isr.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }

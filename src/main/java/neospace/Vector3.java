@@ -23,8 +23,6 @@ public class Vector3 {
         return d;
     }
 
-    /*public double getNormalized() {
-
-    }*/
+    /*public double getNormalized() { }*/
 
 }
